@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Kumar Mishra - Front-end Developer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F9FAFB; /* A light grey background */
+        }
+        .accent-color {
+            color: #F59E0B; /* Amber/Yellow */
+        }
+        .bg-accent-color {
+            background-color: #F59E0B;
+        }
+        .btn-primary {
+            background-color: #F59E0B;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #D97706; /* Darker Amber */
+        }
+        .section-title {
+            @apply text-4xl font-bold text-gray-800 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-500 text-center max-w-2xl mx-auto mt-2 mb-12;
+        }
+        /* Style for the swiper pagination bullets */
+        .swiper-pagination-bullet-active {
+            background-color: #F59E0B !important;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- =========== Header =========== -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                 <svg class="w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-white bg-accent-color px-4 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="#skills" class="text-gray-600 hover:text-amber-500 transition-colors text-sm font-medium">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-amber-500 transition-colors text-sm font-medium">Projects</a>
+                <a href="#recommendations" class="text-gray-600 hover:text-amber-500 transition-colors text-sm font-medium">Recommendations</a>
+                <a href="#contact" class="text-gray-600 hover:text-amber-500 transition-colors text-sm font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#skills" class="block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Skills</a>
+            <a href="#projects" class="block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Projects</a>
+            <a href="#recommendations" class="block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Recommendations</a>
+            <a href="#contact" class="block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section id="home" class="container mx-auto px-6 py-24 md:py-32">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Left Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-800">I'm Shivam Kumar Mishra</h1>
+                    <h2 class="text-5xl md:text-6xl font-extrabold accent-color mb-4">Front-end Developer</h2>
+                    <p class="text-gray-600 max-w-lg mx-auto lg:mx-0 mb-8">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Et, Volutpat Feugiat Placerat Lobortis. Natoque Rutrum Semper Sed Suspendisse Nunc Lectus.</p>
+                    <a href="#contact" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-flex items-center gap-2">
+                        HIRE ME <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Right Content (Illustration) -->
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/600x500/FFF7ED/F59E0B?text=Developer+Illustration" alt="Developer Illustration" class="rounded-lg w-full max-w-md mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Projects Section =========== -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p1.jpeg" class="w-full h-48 object-cover" alt="Project 1">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">How To Make Flyer Design</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Typescript</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">ReactJs</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p2.jpeg" class="w-full h-48 object-cover" alt="Project 2">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Software Development</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">NextJs</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project Card 3 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p3.jpeg" class="w-full h-48 object-cover" alt="Project 3">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Creative Agency Website</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">TailwindCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project Card 4 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p4.jpeg" class="w-full h-48 object-cover" alt="Project 4">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">App Development</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Swift</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project Card 5 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p5.jpeg" class="w-full h-48 object-cover" alt="Project 5">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Pair Programming</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">VS Code</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project Card 6 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="./Image/p6.jpeg" class="w-full h-48 object-cover" alt="Project 6">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Laptop Coding</h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consec adipiscing elit awd and lorem ipsum...</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Django</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Recommendations Section =========== -->
+        <section id="recommendations" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Recommendations</h2>
+                <p class="section-subtitle">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+                <!-- Swiper -->
+                <div class="swiper-container recommendation-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                                <div class="text-amber-400 text-2xl mb-4">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Great Quality!</h3>
+                                <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</p>
+                                <div class="flex items-center justify-center">
+                                    <img src="./Image/r1.jpeg" alt="James Gouse" class="w-14 h-14 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">James Gouse</h4>
+                                        <p class="text-sm text-gray-500">Graphic Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                                <div class="text-amber-400 text-2xl mb-4">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Amazing Work!</h3>
+                                <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</p>
+                                <div class="flex items-center justify-center">
+                                    <img src="/Image/r2.jpeg" alt="Tiana Philips" class="w-14 h-14 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Tiana Philips</h4>
+                                        <p class="text-sm text-gray-500">Photographer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                                <div class="text-amber-400 text-2xl mb-4">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Great Quality!</h3>
+                                <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</p>
+                                <div class="flex items-center justify-center">
+                                    <img src="./Image/r3.jpeg" alt="Talan Westervelt" class="w-14 h-14 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Talan Westervelt</h4>
+                                        <p class="text-sm text-gray-500">Business Man</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination mt-8"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row justify-between gap-16">
+                    <!-- Form -->
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Leave ME Your Info</h2>
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Full Name (Required)</label>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email (Required)</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary text-white font-bold py-3 px-6 rounded-lg">
+                                SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Information</h2>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-500 p-3 rounded-full"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Country: <span class="font-normal text-gray-600">Bangladesh</span></h4>
+                                    <h4 class="font-bold">City: <span class="font-normal text-gray-600">Dhaka</span></h4>
+                                    <h4 class="font-bold">Street: <span class="font-normal text-gray-600">35 Vhatara, Badda</span></h4>
+                                </div>
+                            </div>
+                             <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-500 p-3 rounded-full"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Email: <span class="font-normal text-gray-600">youremail@gmail.com</span></h4>
+                                    <h4 class="font-bold">Skype: <span class="font-normal text-gray-600">@yourusername</span></h4>
+                                    <h4 class="font-bold">Telegram: <span class="font-normal text-gray-600">@yourusername</span></h4>
+                                </div>
+                            </div>
+                             <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-500 p-3 rounded-full"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Support Services: <span class="font-normal text-gray-600">15369</span></h4>
+                                    <h4 class="font-bold">Office: <span class="font-normal text-gray-600">+58 (021)356 587 235</span></h4>
+                                    <h4 class="font-bold">Personal: <span class="font-normal text-gray-600">+58 (021)356 587 235</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Brands Section =========== -->
+        <section id="brands" class="py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <img src="./Image/4.jpg" alt="Brand 1" class="mx-auto h-20 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition">
+                    <img src="./Image/c24252f390d173e1a61464b19a0717c3.png" alt="Brand 2" class="mx-auto h-20 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition">
+                    <img src="./Image/8b606615b3d458f4817845911df9c5f4.png" alt="Brand 3" class="mx-auto h-20 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition">
+                    <img src="./Image/41a5414d6d1bc655a8907011e864b498.png" alt="Brand 4" class="mx-auto h-20 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div class="col-span-1">
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </a>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>4.5/5 Rating on Lorem</p>
+                        <p>9/10 Rating on Ipsum</p>
+                        <p>4.5/5 Rating on Dolor</p>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="#recommendations" class="text-gray-400 hover:text-white">Recommendations</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Portfolio -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Portfolio</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Frontend Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Backend Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Website Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Machine Learning</a></li>
+                    </ul>
+                </div>
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Copyright, All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Swiper Initialization
+        var swiper = new Swiper('.recommendation-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            }
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name.trim() === '' || email.trim() === '') {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // This is a placeholder for form submission logic.
+            // In a real application, you would send this data to a server.
+            console.log('Form submitted!');
+            alert('Thank you! Your message has been sent.');
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+</body>
+</html>
